@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Батоны</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Батоны</h1>
+    <div class="row" id="breadList">
+    </div>
+    <hr>
+    <form id="breadForm">
+      <h2>Добавить батон</h2>
+      <div class="mb-3">
+        <label for="breadName" class="form-label">Название</label>
+        <input type="text" class="form-control" id="breadName" required>
+      </div>
+      <div class="mb-3">
+        <label for="breadPrice" class="form-label">Цена</label>
+        <input type="number" class="form-control" id="breadPrice" required>
+      </div>
+      <div class="mb-3">
+        <label for="breadImage" class="form-label">Картинка</label>
+        <input type="file" class="form-control" id="breadImage" required accept="image/*">
+      </div>
+      <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+
+    <form id="editForm" class="d-none">
+      <h2>Редактировать батон</h2>
+      <div class="mb-3">
+        <label for="editBreadName" class="form-label">Название</label>
+        <input type="text" class="form-control" id="editBreadName" required>
+      </div>
+      <div class="mb-3">
+        <label for="editBreadPrice" class="form-label">Цена</label>
+        <input type="number" class="form-control" id="editBreadPrice" required>
+      </div>
+      <div class="mb-3">
+        <label for="editBreadImage" class="form-label">Картинка</label>
+        <input type="file" class="form-control" id="editBreadImage" accept="image/*">
+      </div>
+      <button type="button" class="btn btn-primary" id="saveEditBtn">Сохранить</button>
+      <button type="button" class="btn btn-secondary" id="cancelEditBtn">Отмена</button>
+    </form>
+  </div>
+  <script src="code.js"></script>
+</body>
+</html>
